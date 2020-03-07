@@ -1,19 +1,49 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StatusBar, StyleSheet, View } from 'react-native';
+import NavBar from "./src/NavBar";
+import Constants from 'expo-constants';
+import AddTodo from "./src/AddTodo";
+
+function MyStatusBar({backgroundColor, ...props}) {
+    return (
+        <View style={{backgroundColor, height: Constants.statusBarHeight}}>
+            <StatusBar translucent backgroundColor={backgroundColor} {...props} />
+        </View>
+    )
+}
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+    const [todos, setTodos] = useState([]);
+
+    const addTodo = (title) => {
+        setTodos(prev => [
+                {
+                    id: Date.now().toString(),
+                    title
+                },
+                ...prev,
+            ]
+        )
+    };
+
+    return (
+        <View>
+            <MyStatusBar backgroundColor='grey' barStyle="light-content"/>
+            <NavBar title='Todo App'/>
+            <View style={styles.container}>
+                <AddTodo onSubmit={addTodo}/>
+                <View>
+
+                </View>
+            </View>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        paddingHorizontal: 5,
+        paddingVertical: 5
+    },
 });
