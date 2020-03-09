@@ -7,6 +7,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+
 import { THEME } from "../theme";
 import AppButton from "./ui/AppButton";
 
