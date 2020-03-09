@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {
   Alert,
-  Button,
   Modal,
   StyleSheet,
   TextInput,
@@ -68,6 +67,7 @@ const styles = StyleSheet.create({
     borderBottomColor: THEME.MAIN_COLOR,
     borderBottomWidth: 2,
     width: "80%",
+    color: THEME.MAIN_COLOR
   },
   buttons: {
     width: "100%",
