@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from "prop-types";
 import { THEME } from "../theme";
+import AppText from './ui/AppText';
 
 const Todo = ({todo, onRemove, onOpen}) => {
     return (
@@ -10,7 +11,7 @@ const Todo = ({todo, onRemove, onOpen}) => {
             onLongPress={onRemove.bind(null, todo.id)}
         >
             <View style={styles.todo}>
-                <Text>{todo.title}</Text>
+                <AppText>{todo.title}</AppText>
             </View>
         </TouchableOpacity>
     )
