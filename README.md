@@ -13,11 +13,7 @@ This is my first React Native project where I develope a simple TODO app with th
 * icons
 * reducer and context
 * server work
-* redux
-* navigation
-* deploy
-
-#
+* use the Context instead of Redux
 
 ##
 ### Installation
