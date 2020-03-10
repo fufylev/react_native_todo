@@ -2,17 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet, Text } from 'react-native';
 
-const AppCard = (props) => {
-  return (
-    <View style={{...styles.default, ...props.style}}>
-        {props.children}
-    </View>
-  )
+const AppCard = props => {
+    return <View style={{ ...styles.default, ...props.style }}>{props.children}</View>;
 };
 
-AppCard.propTypes = {
-    
-};
+AppCard.propTypes = {};
 
 const styles = StyleSheet.create({
     default: {
@@ -23,11 +17,11 @@ const styles = StyleSheet.create({
         shadowColor: '#000',
         shadowRadius: 2,
         shadowOpacity: 0.3,
-        shadowOffset: {width: 2, height: 2},
+        shadowOffset: { width: 2, height: 2 },
         elevation: 8,
         backgroundColor: '#fff',
-        borderRadius: 10
-    }
+        borderRadius: 10,
+    },
 });
 
 export default AppCard;
