@@ -1,5 +1,5 @@
 ## React Native Todo App
-This is my first React Native project where I develope a simple TODO app with these various features but not limited to:
+This is my second React Native project where I develope a simple TODO app with these various features but not limited to:
 * hooks
 * styles
 * forms
